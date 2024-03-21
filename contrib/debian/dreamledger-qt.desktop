@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=DreamLedger Core
+Comment=DreamLedger P2P Cryptocurrency
+Comment[de]=Verbinde mit dem DreamLedger peer-to-peer Netzwerk
+Comment[fr]=DreamLedger, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=DreamLedger, eşten eşe kriptografik sanal para birimi
+Exec=dreamledger-qt %u
+Terminal=false
+Type=Application
+Icon=dreamledger128
+MimeType=x-scheme-handler/dreamledger;
+Categories=Office;Finance;P2P;Network;Qt;
+StartupWMClass=DreamLedger-qt

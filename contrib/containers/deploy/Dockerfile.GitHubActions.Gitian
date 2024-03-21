@@ -1,0 +1,45 @@
+# syntax=docker/dockerfile:1.3
+FROM ubuntu:focal
+LABEL maintainer="DreamLedger Developers <dev@dreamledger.org>"
+LABEL description="Dockerised DreamLedger"
+
+ARG USER_ID
+ARG GROUP_ID
+ARG TAG
+
+ENV HOME /home/dreamledger
+
+# add user with specified (or default) user/group ids
+ENV USER_ID ${USER_ID:-1000}
+ENV GROUP_ID ${GROUP_ID:-1000}
+RUN groupadd -g ${GROUP_ID} dreamledger && \
+    useradd -u ${USER_ID} -g dreamledger -s /bin/bash -m -d /home/dreamledger dreamledger  && \
+    mkdir /home/dreamledger/.dreamledger && \
+    chown ${USER_ID}:${GROUP_ID} -R /home/dreamledger
+
+RUN apt-get update && \
+    apt-get -y install --no-install-recommends \
+    wget \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY dreamledger-binaries/${TAG}/dreamledger* /home/dreamledger
+
+RUN mach=$(uname -m) \
+      && case $mach in aarch64) arch="aarch64-linux-gnu"; ;; x86_64) arch="x86_64-linux-gnu"; ;;  *) echo "ERROR: Machine type $mach not supported."; ;; esac \
+      && cd /home/dreamledger \
+      && tar xvzf dreamledger*$arch.tar.gz \
+      && echo $(ls -1 /home/dreamledger) \
+      && cp dreamledger-*/bin/* /usr/local/bin \
+      && rm -rf dreamledger*
+
+USER dreamledger
+
+VOLUME ["/home/dreamledger"]
+
+COPY dreamledger/contrib/containers/deploy/docker-entrypoint.sh /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+EXPOSE 16815 9999 26815 26816
+
+WORKDIR /home/dreamledger

@@ -1,0 +1,22 @@
+QT_TS = \
+  qt/locale/dreamledger_ar.ts \
+  qt/locale/dreamledger_bg.ts \
+  qt/locale/dreamledger_de.ts \
+  qt/locale/dreamledger_en.ts \
+  qt/locale/dreamledger_es.ts \
+  qt/locale/dreamledger_fi.ts \
+  qt/locale/dreamledger_fr.ts \
+  qt/locale/dreamledger_it.ts \
+  qt/locale/dreamledger_ja.ts \
+  qt/locale/dreamledger_ko.ts \
+  qt/locale/dreamledger_nl.ts \
+  qt/locale/dreamledger_pl.ts \
+  qt/locale/dreamledger_pt.ts \
+  qt/locale/dreamledger_ro.ts \
+  qt/locale/dreamledger_ru.ts \
+  qt/locale/dreamledger_sk.ts \
+  qt/locale/dreamledger_th.ts \
+  qt/locale/dreamledger_tr.ts \
+  qt/locale/dreamledger_vi.ts \
+  qt/locale/dreamledger_zh_CN.ts \
+  qt/locale/dreamledger_zh_TW.ts

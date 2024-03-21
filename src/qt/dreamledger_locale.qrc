@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/dreamledger_ar.qm</file>
+        <file alias="bg">locale/dreamledger_bg.qm</file>
+        <file alias="de">locale/dreamledger_de.qm</file>
+        <file alias="en">locale/dreamledger_en.qm</file>
+        <file alias="es">locale/dreamledger_es.qm</file>
+        <file alias="fi">locale/dreamledger_fi.qm</file>
+        <file alias="fr">locale/dreamledger_fr.qm</file>
+        <file alias="it">locale/dreamledger_it.qm</file>
+        <file alias="ja">locale/dreamledger_ja.qm</file>
+        <file alias="ko">locale/dreamledger_ko.qm</file>
+        <file alias="nl">locale/dreamledger_nl.qm</file>
+        <file alias="pl">locale/dreamledger_pl.qm</file>
+        <file alias="pt">locale/dreamledger_pt.qm</file>
+        <file alias="ro">locale/dreamledger_ro.qm</file>
+        <file alias="ru">locale/dreamledger_ru.qm</file>
+        <file alias="sk">locale/dreamledger_sk.qm</file>
+        <file alias="th">locale/dreamledger_th.qm</file>
+        <file alias="tr">locale/dreamledger_tr.qm</file>
+        <file alias="vi">locale/dreamledger_vi.qm</file>
+        <file alias="zh_CN">locale/dreamledger_zh_CN.qm</file>
+        <file alias="zh_TW">locale/dreamledger_zh_TW.qm</file>
+    </qresource>
+</RCC>

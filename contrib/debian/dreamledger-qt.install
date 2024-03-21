@@ -1,0 +1,6 @@
+usr/local/bin/dreamledger-qt usr/bin
+share/pixmaps/dreamledger32.xpm usr/share/pixmaps
+share/pixmaps/dreamledger16.xpm usr/share/pixmaps
+share/pixmaps/dreamledger128.png usr/share/pixmaps
+debian/dreamledger-qt.desktop usr/share/applications
+debian/dreamledger-qt.protocol usr/share/kde4/services/

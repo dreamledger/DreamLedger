@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[dreamledger.dreamledger_ents]
+file_filter = src/qt/locale/dreamledger_<lang>.ts
+source_file = src/qt/locale/dreamledger_en.xlf
+source_lang = en
