@@ -56,7 +56,7 @@ class CoinStatsIndexTest(BitcoinTestFramework):
         self._test_index_rejects_hash_serialized()
 
     def block_subsidy(self, prev_bits):
-        # Subsidy calculations valid till block 4500
+      
         diff = 0x0000ffff / (prev_bits & 0x00ffffff)
         subsidy = (1111.0 / (pow((diff+1.0),2.0)))
         return min(500, max(1, subsidy))
